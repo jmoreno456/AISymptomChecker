@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-05-23 15:08:44",
+  "symptoms_entered": [
+    "headache"
+  ],
+  "matched_conditions": [
+    "dehydraytion",
+    "migraine",
+    "tension headache"
+  ],
+  "unknown_symptoms": []
+}

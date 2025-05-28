@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-05-23 15:13:39",
+  "symptoms_entered": [
+    "fever",
+    "chills"
+  ],
+  "matched_conditions": [
+    "malaria",
+    "flu",
+    "common cold"
+  ],
+  "unknown_symptoms": [
+    "chills"
+  ]
+}
