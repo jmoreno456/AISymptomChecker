@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Prediction Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark");
-        }
-    </script>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Predicted Diseases</h1>
-        <p><strong>Based on symptoms:</strong> {{ symptoms|join(", ") }}</p>
-        <ol>
-            {% for disease, prob in top_diseases %}
-            <li><strong>{{ disease }}</strong> – {{ prob }}%</li>
-            {% endfor %}
-        </ol>
-        <a href="/">← Try again</a>
-    </div>
-</body>
-
-</html>
+<div class="container">
+    <h1>Predicted Diseases</h1>
+    {% if error_message %}
+    <p style="color: red; font-weight: bold;">{{ error_message }}</p>
+    <a href="/">← Try again</a>
+    {% else %}
+    <p><strong>Based on symptoms:</strong> {{ symptoms|join(", ") }}</p>
+    <ol>
+        {% for disease, prob in top_diseases %}
+        <li><strong>{{ disease }}</strong> – {{ prob }}%</li>
+        {% endfor %}
+    </ol>
+    <a href="/">← Try again</a>
+    {% endif %}
+</div>
